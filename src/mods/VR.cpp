@@ -2266,7 +2266,7 @@ void VR::openvr_input_to_re2_re3(REManagedObject* input_system) {
     set_button_state(app::ropeway::InputDefine::Kind::DEFENSE, is_left_trigger_down);
 
     // L3: Sprint
-    set_button_state(app::ropeway::InputDefine::Kind::JOG1, is_left_joystick_click_down);
+    set_button_state(app::ropeway::InputDefine::Kind::JOG1, is_right_joystick_click_down);
 
     // R3: Reset camera
     set_button_state(app::ropeway::InputDefine::Kind::RESET_CAMERA, is_reset_view_down);
