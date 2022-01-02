@@ -380,8 +380,8 @@ void VR::on_lua_state_created(sol::state& lua) {
         "get_action_joystick_click", &VR::get_action_joystick_click,
         "get_action_a_button", &VR::get_action_a_button,
         "get_action_b_button", &VR::get_action_b_button,
-        "get_left_joystick", &VR::get_left_joystick,
-        "get_right_joystick", &VR::get_right_joystick,
+        "get_left_joystick", &VR::get_right_joystick,
+        "get_right_joystick", &VR::get_left_joystick,
         "is_using_controllers", &VR::is_using_controllers,
         "is_hmd_active", &VR::is_hmd_active,
         "is_action_active", &VR::is_action_active
@@ -2638,9 +2638,9 @@ Vector2f VR::get_joystick_axis(vr::VRInputValueHandle_t handle) const {
 }
 
 Vector2f VR::get_left_stick_axis() const {
-    return get_joystick_axis(m_left_joystick);
+    return get_joystick_axis(m_right_joystick);
 }
 
 Vector2f VR::get_right_stick_axis() const {
-    return get_joystick_axis(m_right_joystick);
+    return get_joystick_axis(m_left_joystick);
 }
